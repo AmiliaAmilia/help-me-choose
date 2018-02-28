@@ -7,17 +7,28 @@
   </head>
   <body>
     <h1>Help med choose between...</h1>
-    <div>
-      <div>
-        <input placeholder="Something"></input>
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Please enter something"></input>
       </div>
-      <button>Add</button>
       <button class="addOption">Add</button>
     </div>
-    <button>Go!</button>
+    <div class="resultSection"></div>
     <button class="buttonGo">Go!</button>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(function() {
+        $('.resultSection').hide()
+
+        var add_option = function() {
+          $('.inputs').append('<input placeholder="Please enter something more"></inputs>')
+        }
+
+        $('.addOption').click(add_option)
+      })
+
+
+
+    </script>
   </body>
 </html>
